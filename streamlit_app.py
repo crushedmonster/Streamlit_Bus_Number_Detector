@@ -30,7 +30,7 @@ uploaded_file = st.sidebar.file_uploader('',
                                          type=['png', 'jpg', 'jpeg'],
                                          accept_multiple_files=False)
 
-st.sidebar.write('[Find additional images here.](https://github.com/crushedmonster)')
+st.sidebar.write('[Find additional images here.](https://github.com/crushedmonster/Streamlit_Bus_Number_Detector/tree/master/bus_sample_images)')
 st.sidebar.write('<br>', unsafe_allow_html=True)
 st.sidebar.write('### :floppy_disk: Parameters')
 st.sidebar.write('#### Inference Setting:')
