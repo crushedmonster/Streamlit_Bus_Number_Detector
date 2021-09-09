@@ -152,4 +152,4 @@ else:
         # Display option to play audio file
         audio_file = open('/tmp/bus_number.mp4', 'rb')
         audio_bytes = audio_file.read()
-        st.audio(audio_obj, format='audio/ogg')
+        st.audio(audio_obj, format='audio/ogg',start_time=0)
