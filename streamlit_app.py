@@ -125,7 +125,7 @@ else:
     # get grayscale image
     gray = get_grayscale(roi)
     # apply thresholding
-    thresh = thresholding(blur)   
+    thresh = thresholding(gray)   
 
     ## OCR
     # OCR the input image using Tesseract
