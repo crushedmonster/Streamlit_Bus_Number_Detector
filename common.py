@@ -33,6 +33,8 @@ def opening(image):
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
 # OCR Setup
-#if my_env == "cloud":
-    
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+my_env = "cloud"
+if my_env == "cloud": ## <-- TOGGLE THIS
+    pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
+else: # running on local
+    pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
