@@ -124,8 +124,6 @@ else:
     
     # get grayscale image
     gray = get_grayscale(roi)
-    # remove noise
-    blur = remove_noise(gray)
     # apply thresholding
     thresh = thresholding(blur)   
 
