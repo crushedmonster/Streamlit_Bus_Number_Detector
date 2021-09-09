@@ -31,3 +31,10 @@ def thresholding(image):
 def opening(image):
     kernel = np.ones((5,5),np.uint8)
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+
+# OCR setup
+my_env = "cloud" ## <-- TOGGLE THIS
+if my_env == "cloud":
+    pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
+else: # assume running on local
+    pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
