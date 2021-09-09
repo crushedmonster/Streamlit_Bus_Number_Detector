@@ -2,6 +2,7 @@ streamlit
 opencv-python-headless
 torch
 torchvision
+gTTS
 seaborn==0.11.0
 tqdm==4.50.2
 Flask==1.1.2
@@ -15,7 +16,6 @@ streamlit==0.87.0
 thop==0.0.31.post2005241907
 pytesseract==0.3.8
 matplotlib==3.3.2
-gTTS==2.2.3
 albumentations==1.0.3
 coremltools==4.1
 onnxruntime==1.8.1
