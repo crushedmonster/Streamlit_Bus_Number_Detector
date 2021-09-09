@@ -22,11 +22,6 @@ def thresholding(image):
 def remove_noise(image):
     return cv2.medianBlur(image,3)
 
-# thresholding
-def thresholding(image):
-    thresh = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
-    return thresh
-
 # opening - erosion followed by dilation
 def opening(image):
     kernel = np.ones((5,5),np.uint8)
