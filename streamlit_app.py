@@ -85,7 +85,8 @@ image2 = image.copy()
 
 ## Object Detection
 # model
-model = torch.hub.load('yolov5', 'custom', path='best', source='local') 
+model = torch.hub.load('yolov5', 'custom', path='best', source='local', 
+                       force_reload=True) 
 
 # get bounding box
 st.write('### Inferenced Image')
