@@ -147,9 +147,9 @@ else:
         audio_text = f'Bus {int(text)}'
         language = 'en'
         audio_obj = gTTS(text=audio_text, lang=language, slow=False) 
-        audio_obj.save("/tmp/bus_number.mp4") 
+        audio_obj.save("/tmp/bus_number.mp3") 
         
         # Display option to play audio file
-        audio_file = open('/tmp/bus_number.mp4', 'rb')
+        audio_file = open('/tmp/bus_number.mp3', 'rb')
         audio_bytes = audio_file.read()
         st.audio(audio_obj, format='audio/ogg',start_time=0)
