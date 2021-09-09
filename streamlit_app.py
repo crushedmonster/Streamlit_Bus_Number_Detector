@@ -124,14 +124,19 @@ else:
     
     # get grayscale image
     gray = get_grayscale(roi)
+    # remove noise
+    blur = remove_noise(gray)
     # apply thresholding
-    thresh = thresholding(gray)
+    thresh = thresholding(blur)
+    # apply opening
+    opening = opening(thresh)
+    
 
     ## OCR
     # OCR the input image using Tesseract
     # recognise only digits by changing the config to the following
     custom_config = r'--oem 3 --psm 6 outputbase digits'
-    text = pytesseract.image_to_string(thresh, config=custom_config)
+    text = pytesseract.image_to_string(opening, config=custom_config)
     
     st.write('### Result')
     # check if output is a number
