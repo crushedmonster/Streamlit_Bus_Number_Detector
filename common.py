@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import pytesseract
 import torch
+import streamlit as st
 
 ## Image Processing
 # define helper function to process ROI
