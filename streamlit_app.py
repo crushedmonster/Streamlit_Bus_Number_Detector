@@ -81,6 +81,7 @@ else:
     
 # convert to numpy array
 image = np.array(image)
+image2 = image.copy()
 
 ## Object Detection
 # model
@@ -91,7 +92,7 @@ st.write('### Inferenced Image')
 
 # inference settings
 model.conf = float(f'{confidence_threshold}')  # confidence threshold (0-1)
-results = model(image, size=640) # custom inference size
+results = model(image2, size=640) # custom inference size
 
 # results
 # display image.
