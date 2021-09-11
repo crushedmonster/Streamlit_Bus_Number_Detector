@@ -81,18 +81,17 @@ else:
     
 # convert to numpy array
 image = np.array(image)
-image2 = image.copy()
 
 ## Object Detection
 # model
-model = torch.hub.load('yolov5', 'custom', path='best', source='local') 
+model = load_model()
 
 # get bounding box
 st.write('### Inferenced Image')
 
 # inference settings
 model.conf = float(f'{confidence_threshold}')  # confidence threshold (0-1)
-results = model(image2, size=640) # custom inference size
+results = model(image, size=640) # custom inference size
 
 # results
 # display image.
