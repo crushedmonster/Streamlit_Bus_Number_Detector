@@ -34,7 +34,7 @@ def opening(image):
     return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
     
 # Define function to load model
-@st.cache(allow_output_mutation=True)
+@st.cache
 def load_model():
     model = torch.hub.load('yolov5', 'custom', path='best', source='local')
     return model
